@@ -1,2 +1,3 @@
 # GHEMS
-A distributed patients data management system.
+
+General Health Management System (GHEMS for short) is distributed patients data management system.
