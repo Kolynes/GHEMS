@@ -15,7 +15,10 @@ class Patient(models.Model):
     state = models.CharField(max_length=100)
     lga = models.CharField(max_length=100)
     date = models.DateTimeField("Date of registration", auto_now_add=True)
-    passcode = PasswordField()
+    password = PasswordField()
+
+    def __str__(self):
+        return self.name
 
 class History(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.PROTECT)
@@ -24,8 +27,14 @@ class History(models.Model):
     diagnosis = models.TextField()
     prescription = models.TextField()
 
+    def __str__(self):
+        return self.patient.name
+
 class Hospital(models.Model):
     name = models.TextField()
     address = models.TextField()
     code = models.TextField("Hospital Registration Code")
-    passcode = PasswordField()
+    password = PasswordField()
+
+    def __str__(self):
+        return self.name

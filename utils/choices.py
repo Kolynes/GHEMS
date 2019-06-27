@@ -6,7 +6,7 @@ MARITAL_STATUSES = (
     ("D", "Divorced"),
 )
 
-GENDER_CHOICES = (
+GENDERS = (
     ("F", "Female"),
     ("M", "Male"),
 )
